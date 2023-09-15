@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="toppic">
+        <img src="banana1.jpg">
+    </div>
+    <div class="nav3">
+        <a href="information.html">sources</a>
+        <a href="index.html">home</a>
+    </div>
+    <div class="middle-container">
+    </div>
+
+    <div class="banana-container">
+        <div class="banana-item">
+            <img src="banana1.jpg" alt="Banana 1">
+            <p>Banan 3</p>
+        </div>
+        <div class="banana-item">
+            <img src="banana2.jpg" alt="Banana 2">
+            <p>Banan 2</p>
+        </div>
+        <div class="banana-item">
+            <img src="banana3.jpg" alt="Banana 3">
+            <p>Banana 3</p>
+        </div>
+    </div>
+
+    <div class="middle-container">
+
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="banana1.jpg" alt="Banana 1">
+        </div>
+        <div class="slide fade">
+            <img src="banana2.jpg" alt="Banana 2">
+        </div>
+        <div class="slide fade">
+            <img src="banana3.jpg" alt="Banana 3">
+        </div>
+    </div>
+
+    <div class="textside">
+Banan
+    </div>
+
+    <script>
+    let slideIndex = 0;
+    showSlides();
+
+function showSlides() {
+    let slides = document.querySelectorAll('.slide');
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
+</script>
+</body>
+</html>
